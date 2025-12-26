@@ -1,0 +1,21 @@
+MANUAL GITHUB UPLOAD INSTRUCTIONS
+=================================
+
+Since Git is not installed, upload manually:
+
+1. Go to: https://github.com/PosibabuYalla/PortFolio
+2. Click "uploading an existing file"
+3. Drag and drop ALL files from this folder
+4. Commit message: "Initial portfolio upload"
+5. Click "Commit changes"
+
+Files to upload:
+- src/ (entire folder)
+- package.json
+- package-lock.json  
+- index.html
+- vite.config.js
+- tailwind.config.js
+- postcss.config.js
+- .gitignore
+- README.md
