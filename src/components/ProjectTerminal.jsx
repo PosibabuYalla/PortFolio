@@ -8,7 +8,7 @@ const projects = [
     status: "ACTIVE",
     type: "WordPress Plugin",
     description: "WhatsApp integration plugin for WordPress websites with advanced customization options and analytics.",
-    logo: "/src/images/logos/CLICKTOCHATLOGO.gif",
+    logo: "/images/logos/CLICKTOCHATLOGO.gif",
     techStack: {
       frontend: ["JavaScript", "CSS3", "HTML5"],
       backend: ["PHP", "WordPress API"],
@@ -27,7 +27,7 @@ const projects = [
     status: "DEPLOYED",
     type: "Tourism Platform",
     description: "Complete tourism booking platform with real-time availability and integrated payment systems.",
-    logo: "/src/images/logos/PAPIKONDALULOGO.png",
+    logo: "/images/logos/PAPIKONDALULOGO.png",
     techStack: {
       frontend: ["Next.js", "Tailwind CSS", "React"],
       backend: ["Node.js", "Express"],
@@ -46,7 +46,7 @@ const projects = [
     status: "ACTIVE",
     type: "Educational Platform",
     description: "Skill development platform with course management and progress tracking for students.",
-    logo: "/src/images/logos/SLSITLOGO.png",
+    logo: "/images/logos/SLSITLOGO.png",
     techStack: {
       frontend: ["React", "Material-UI"],
       backend: ["Node.js", "REST APIs"],
@@ -65,7 +65,7 @@ const projects = [
     status: "DEPLOYED",
     type: "Educational Website",
     description: "Professional college website with admission portal and student management system.",
-    logo: "/src/images/logos/VISWABHARATHILOGO.png",
+    logo: "/images/logos/VISWABHARATHILOGO.png",
     techStack: {
       frontend: ["WordPress", "Custom PHP"],
       backend: ["PHP", "MySQL"],
@@ -84,7 +84,7 @@ const projects = [
     status: "ONGOING",
     type: "Client Solutions",
     description: "Multiple client projects including e-commerce solutions and business automation tools.",
-    logo: "/src/images/logos/SABARIYATECHLOGO.png",
+    logo: "/images/logos/SABARIYATECHLOGO.png",
     techStack: {
       frontend: ["React", "Next.js", "Vue.js"],
       backend: ["Node.js", "PHP", "Python"],

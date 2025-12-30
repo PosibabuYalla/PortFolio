@@ -6,7 +6,7 @@ const experiences = [
     company: "HoliProjects Internet Pvt. Ltd.",
     period: "2024 – Present",
     role: "Software Developer",
-    logo: "/src/images/logos/HOLITHEMESLOGO.png",
+    logo: "/images/logos/HOLITHEMESLOGO.png",
     color: "#00B4D8",
     achievements: [
       "Click to Chat WhatsApp Plugin",
@@ -20,7 +20,7 @@ const experiences = [
     company: "SabariyaTech [Freelancer]",
     period: "2025 – Present",
     role: "Software Developer",
-    logo: "/src/images/logos/SABARIYATECHLOGO.png",
+    logo: "/images/logos/SABARIYATECHLOGO.png",
     color: "#1E3A8A",
     achievements: [
       "MERN applications development",
@@ -33,7 +33,7 @@ const experiences = [
     company: "InnoByte Services",
     period: "2023",
     role: "Web Developer Intern",
-    logo: "/src/images/logos/INNOBYTELOGO.png",
+    logo: "/images/logos/INNOBYTELOGO.png",
     color: "#059669",
     achievements: [
       "Built responsive client websites",
@@ -46,7 +46,7 @@ const experiences = [
     company: "10000 Coders",
     period: "2024",
     role: "MERN Stack Intern",
-    logo: "/src/images/logos/10000CODERSLOGO.png",
+    logo: "/images/logos/10000CODERSLOGO.png",
     color: "#DC2626",
     achievements: [
       "Full-stack apps with authentication",

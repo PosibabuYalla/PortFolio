@@ -8,12 +8,15 @@ import ProjectTerminal from './components/ProjectTerminal'
 import ContactTerminal from './components/ContactTerminal'
 import StatusBar from './components/StatusBar'
 import PanelSelector from './components/PanelSelector'
+import { preloadImages } from './utils/preloadAssets'
 
 function App() {
   const [activePanel, setActivePanel] = useState('core')
   const [systemBooted, setSystemBooted] = useState(false)
 
   useEffect(() => {
+    // Preload assets
+    preloadImages()
     const timer = setTimeout(() => setSystemBooted(true), 500)
     return () => clearTimeout(timer)
   }, [])

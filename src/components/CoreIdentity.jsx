@@ -87,7 +87,7 @@ adopted Click to Chat WhatsApp plugin.`
         <div className="relative w-48 h-48 sm:w-64 sm:h-64">
           {/* Profile image */}
           <motion.img 
-            src="/src/images/posiprofwb.png"
+            src="/images/posiprofwb.png"
             alt="Posibabu Yalla"
             className="w-64 h-64 sm:w-80 sm:h-80 object-contain grayscale border-hud-primary/50 rounded-lg"
             whileHover={{ 

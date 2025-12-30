@@ -74,7 +74,7 @@ const ParticleSystem = () => {
 }
 
 const BrainModel = ({ activePanel, mousePosition }) => {
-  const { scene } = useGLTF('/src/models/brain.glb')
+  const { scene } = useGLTF('/models/brain.glb')
   const meshRef = useRef()
   
   useFrame((state) => {
