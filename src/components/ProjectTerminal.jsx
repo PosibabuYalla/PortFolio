@@ -282,9 +282,9 @@ const ProjectDetail = ({ project, onBack }) => {
       </div>
       
       {/* Header */}
-      <div className="flex items-center gap-4 mb-8 relative z-10">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4 mb-4 sm:mb-8 relative z-10">
         <motion.button
-          className="px-6 py-3 border border-hud-border text-hud-primary font-mono text-xs hover:border-hud-primary transition-all duration-300 relative overflow-hidden"
+          className="px-4 sm:px-6 py-2 sm:py-3 border border-hud-border text-hud-primary font-mono text-xs hover:border-hud-primary transition-all duration-300 relative overflow-hidden w-full sm:w-auto"
           onClick={onBack}
           whileHover={{ scale: 1.02, boxShadow: '0 0 15px rgba(0,180,216,0.2)' }}
           whileTap={{ scale: 0.98 }}
@@ -300,17 +300,17 @@ const ProjectDetail = ({ project, onBack }) => {
           />
           &lt; BACK_TO_TERMINAL
         </motion.button>
-        <div className="text-hud-primary font-mono text-sm tracking-wider">
+        <div className="text-hud-primary font-mono text-xs sm:text-sm tracking-wider">
           PROJECT_DETAIL_VIEW
         </div>
-        <div className="flex-1 h-px bg-gradient-to-r from-hud-primary/40 to-transparent ml-4" />
+        <div className="flex-1 h-px bg-gradient-to-r from-hud-primary/40 to-transparent ml-0 sm:ml-4" />
       </div>
       
       {/* Main Layout */}
-      <div className="flex-1 grid grid-cols-1 lg:grid-cols-3 gap-8 relative z-10">
+      <div className="flex-1 grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-8 relative z-10 overflow-y-auto scrollbar-thin">
         
         {/* Left Panel - Data Terminal */}
-        <div className="relative h-fit">
+        <div className="relative h-fit order-1 lg:order-1">
           {/* Vertical HUD spine */}
           <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-hud-primary/60 via-hud-primary/30 to-transparent" />
           <div className="absolute left-0 top-4 w-3 h-px bg-hud-primary/60" />
@@ -318,7 +318,7 @@ const ProjectDetail = ({ project, onBack }) => {
           <div className="absolute left-0 bottom-8 w-2 h-px bg-hud-primary/40" />
           <div className="absolute left-0 bottom-4 w-3 h-px bg-hud-primary/60" />
           
-          <div className="border border-hud-border rounded-lg bg-hud-panel/50 backdrop-blur-sm ml-4 h-fit"
+          <div className="border border-hud-border rounded-lg bg-hud-panel/50 backdrop-blur-sm ml-0 sm:ml-4 h-fit w-full"
                style={{ 
                  boxShadow: 'inset 0 1px 0 rgba(0,180,216,0.15), inset 0 -1px 0 rgba(0,0,0,0.4), 0 4px 12px rgba(0,0,0,0.3)' 
                }}>
@@ -327,7 +327,7 @@ const ProjectDetail = ({ project, onBack }) => {
             <div className="absolute inset-0 bg-gradient-to-br from-hud-primary/[0.03] via-transparent to-hud-secondary/[0.02]" />
             <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-hud-primary/40 to-transparent" />
             
-            <div className="relative z-10 p-5">
+            <div className="relative z-10 p-3 sm:p-5">
               <div className="flex items-center gap-2 mb-5 text-xs font-mono text-hud-primary tracking-wider">
                 <div className="w-1.5 h-1.5 bg-hud-primary rounded-full animate-pulse" />
                 DATA_TERMINAL
@@ -394,7 +394,7 @@ const ProjectDetail = ({ project, onBack }) => {
         </div>
         
         {/* Center - Project Engine Core */}
-        <div className="flex flex-col items-center justify-start relative pt-8">
+        <div className="flex flex-col items-center justify-start relative pt-4 sm:pt-8 order-2 lg:order-2">
           {/* Radial grid lines */}
           <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-32 opacity-[0.08]">
             <svg className="w-full h-full" viewBox="0 0 128 128">
@@ -415,12 +415,12 @@ const ProjectDetail = ({ project, onBack }) => {
           
           {/* Logo container */}
           <motion.div 
-            className="w-40 h-40 flex flex-col items-center justify-center relative mb-6"
+            className="w-32 h-32 sm:w-40 sm:h-40 flex flex-col items-center justify-center relative mb-4 sm:mb-6"
           >
             <motion.img 
               src={project.logo}
               alt={project.name}
-              className="w-36 h-36 object-contain relative z-10 mb-2"
+              className="w-28 h-28 sm:w-36 sm:h-36 object-contain relative z-10 mb-2"
               animate={{
                 scale: [1, 1.03, 1],
                 y: [0, -2, 0]
@@ -442,12 +442,12 @@ const ProjectDetail = ({ project, onBack }) => {
           </motion.div>
           
           {/* Control Buttons Below Logo */}
-          <div className="flex flex-col gap-3 w-full max-w-xs">
+          <div className="flex flex-col gap-2 sm:gap-3 w-full max-w-xs px-4 sm:px-0">
             {Object.entries(project.links).filter(([type]) => type !== 'case').map(([type, url], index) => (
               <motion.a
                 key={type}
                 href={url}
-                className="relative px-6 py-2.5 border border-hud-border text-hud-primary font-mono text-xs uppercase tracking-wider overflow-hidden group transition-all duration-500 hover:border-hud-primary text-center"
+                className="relative px-4 sm:px-6 py-2 sm:py-2.5 border border-hud-border text-hud-primary font-mono text-xs uppercase tracking-wider overflow-hidden group transition-all duration-500 hover:border-hud-primary text-center"
                 style={{
                   clipPath: 'polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% calc(100% - 3px), calc(100% - 3px) 100%, 3px 100%, 0 calc(100% - 6px))',
                   background: 'linear-gradient(135deg, rgba(15,23,42,0.6) 0%, rgba(0,0,0,0.9) 100%)',
@@ -479,7 +479,7 @@ const ProjectDetail = ({ project, onBack }) => {
         </div>
         
         {/* Right Panel - System Blocks */}
-        <div className="border border-hud-border rounded-lg bg-hud-panel/50 backdrop-blur-sm h-fit relative overflow-hidden -ml-8 scale-90"
+        <div className="border border-hud-border rounded-lg bg-hud-panel/50 backdrop-blur-sm h-fit relative overflow-hidden ml-0 lg:-ml-8 scale-100 lg:scale-90 order-3 lg:order-3 w-full"
              style={{ 
                boxShadow: 'inset 0 1px 0 rgba(0,180,216,0.15), inset 0 -1px 0 rgba(0,0,0,0.4), 0 4px 12px rgba(0,0,0,0.3)' 
              }}>
@@ -488,7 +488,7 @@ const ProjectDetail = ({ project, onBack }) => {
           <div className="absolute inset-0 bg-gradient-to-br from-hud-secondary/[0.03] via-transparent to-hud-primary/[0.02]" />
           <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-hud-primary/40 to-transparent" />
           
-          <div className="relative z-10 p-5">
+          <div className="relative z-10 p-3 sm:p-5">
             <div className="flex items-center gap-2 mb-5 text-xs font-mono text-hud-primary tracking-wider">
               <div className="w-1.5 h-1.5 bg-hud-primary rounded-full animate-pulse" />
               SYSTEM_BLOCKS

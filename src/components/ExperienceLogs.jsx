@@ -80,8 +80,8 @@ const ExperienceLogs = ({ isActive }) => {
         <div className="flex-1 h-px bg-gradient-to-r from-hud-primary/50 to-transparent ml-2 sm:ml-4"></div>
       </div>
 
-      <div className="flex-1 min-h-0 overflow-x-auto pb-2 relative z-10 scrollbar-thin">
-        <div className="flex gap-2 sm:gap-4 justify-center min-w-max px-2">
+      <div className="flex-1 min-h-0 overflow-x-auto md:overflow-x-auto overflow-y-auto md:overflow-y-hidden pb-2 relative z-10 scrollbar-thin">
+        <div className="flex flex-col md:flex-row gap-2 sm:gap-4 justify-center md:min-w-max px-2">
           {experiences.map((exp, index) => (
             <div key={exp.id} className="flex flex-col items-center gap-2 sm:gap-4 flex-shrink-0">
               {/* Company Logo */}
@@ -111,7 +111,7 @@ const ExperienceLogs = ({ isActive }) => {
               
               {/* Experience Card */}
               <motion.div
-                className="w-[270px] sm:w-[320px] h-[320px] sm:h-[360px] border border-hud-border rounded-lg p-3 sm:p-6 bg-gradient-to-br from-black/40 to-black/20 backdrop-blur-sm relative overflow-hidden group shadow-2xl flex flex-col"
+                className="w-full md:w-[270px] lg:w-[320px] h-[320px] sm:h-[360px] border border-hud-border rounded-lg p-3 sm:p-6 bg-gradient-to-br from-black/40 to-black/20 backdrop-blur-sm relative overflow-hidden group shadow-2xl flex flex-col"
                 initial={{ opacity: 0, x: -30, rotateY: -15 }}
                 animate={{ opacity: 1, x: 0, rotateY: 0 }}
                 transition={{ delay: index * 0.15, duration: 0.6 }}
