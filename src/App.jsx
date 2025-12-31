@@ -43,14 +43,16 @@ function App() {
       >
         <div className="h-full w-full border border-hud-border xs:border-2 rounded-lg hud-glow flex flex-col">
           
-          {/* Panel Selector */}
-          <PanelSelector 
-            activePanel={activePanel} 
-            setActivePanel={setActivePanel} 
-          />
+          {/* Panel Selector - Fixed Header */}
+          <div className="flex-shrink-0">
+            <PanelSelector 
+              activePanel={activePanel} 
+              setActivePanel={setActivePanel} 
+            />
+          </div>
           
-          {/* Main Panel Area */}
-          <div className="flex-1 p-1 xs:p-2 sm:p-3 md:p-4 lg:p-6 overflow-hidden">
+          {/* Main Panel Area - Scrollable Body */}
+          <div className="flex-1 min-h-0 overflow-hidden">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activePanel}
@@ -58,15 +60,19 @@ function App() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.3 }}
-                className="h-full hud-panel rounded-lg p-2 xs:p-3 sm:p-4 md:p-5 lg:p-6 overflow-hidden"
+                className="h-full hud-panel rounded-lg overflow-hidden"
               >
-                {renderActivePanel()}
+                <div className="h-full p-2 xs:p-3 sm:p-4 md:p-5 lg:p-6 overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-track-transparent scrollbar-thumb-hud-primary/30">
+                  {renderActivePanel()}
+                </div>
               </motion.div>
             </AnimatePresence>
           </div>
 
-          {/* Status Bar - Footer */}
-          <StatusBar />
+          {/* Status Bar - Fixed Footer */}
+          <div className="flex-shrink-0">
+            <StatusBar />
+          </div>
 
         </div>
       </motion.div>

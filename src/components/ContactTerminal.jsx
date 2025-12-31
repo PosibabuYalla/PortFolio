@@ -47,7 +47,7 @@ const ContactTerminal = ({ isActive }) => {
   }
 
   return (
-    <div className="h-full flex gap-6 relative">
+    <div className="min-h-full flex flex-col lg:flex-row gap-6 relative py-4">
       
       {/* Animated Background Grid */}
       <div className="absolute inset-0 opacity-5">
@@ -64,14 +64,14 @@ const ContactTerminal = ({ isActive }) => {
       </div>
 
       {/* Left Side - Contact Channels */}
-      <div className="flex-1 flex flex-col relative z-10">
-        <div className="flex items-center gap-3 mb-4">
+      <div className="flex-1 flex flex-col relative z-10 min-h-0">
+        <div className="flex items-center gap-3 mb-4 flex-shrink-0">
           <div className="w-3 h-3 bg-hud-primary rounded-full animate-pulse shadow-lg shadow-hud-primary/50"></div>
           <span className="font-mono text-sm text-hud-primary tracking-wider">COMMUNICATION_CHANNELS</span>
           <div className="flex-1 h-px bg-gradient-to-r from-hud-primary/50 to-transparent"></div>
         </div>
 
-        <div className="flex-1 grid grid-cols-2 gap-4">
+        <div className="flex-1 grid grid-cols-1 gap-4 min-h-0">
           {contacts.map((contact, index) => (
             <motion.div
               key={contact.id}
@@ -79,7 +79,7 @@ const ContactTerminal = ({ isActive }) => {
               style={{ borderColor: `${contact.color}40` }}
               initial={{ opacity: 0, scale: 0.9, rotateY: -15 }}
               animate={{ opacity: 1, scale: 1, rotateY: 0 }}
-              transition={{ delay: index * 0.15, duration: 0.6 }}
+              transition={{ delay: index * 0.3, duration: 0.6 }}
               whileHover={{ 
                 scale: 1.05,
                 borderColor: contact.color,
@@ -135,8 +135,8 @@ const ContactTerminal = ({ isActive }) => {
       </div>
 
       {/* Right Side - Message Terminal */}
-      <div className="w-96 flex flex-col relative z-10">
-        <div className="flex items-center gap-3 mb-4">
+      <div className="w-full lg:w-96 flex flex-col relative z-10 min-h-0">
+        <div className="flex items-center gap-3 mb-4 flex-shrink-0">
           <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse shadow-lg shadow-red-500/50"></div>
           <span className="font-mono text-sm text-red-400 tracking-wider">MESSAGE_TRANSMISSION</span>
           <div className="flex-1 h-px bg-gradient-to-r from-red-400/50 to-transparent"></div>
@@ -144,15 +144,15 @@ const ContactTerminal = ({ isActive }) => {
 
         <motion.form 
           onSubmit={handleSubmit} 
-          className="flex-1 flex flex-col gap-4 p-6 border-2 border-hud-border rounded-lg bg-gradient-to-br from-black/80 to-black/40 backdrop-blur-sm relative overflow-hidden"
+          className="flex-1 flex flex-col gap-4 p-6 border-2 border-hud-border rounded-lg bg-gradient-to-br from-black/80 to-black/40 backdrop-blur-sm relative overflow-hidden min-h-0"
           whileHover={{ borderColor: '#00B4D8' }}
         >
           {/* Animated Corner Elements */}
           <div className="absolute top-0 left-0 w-12 h-12 border-l-2 border-t-2 border-hud-primary opacity-60" />
           <div className="absolute bottom-0 right-0 w-12 h-12 border-r-2 border-b-2 border-hud-primary opacity-60" />
           
-          <div className="relative z-10">
-            <div className="space-y-4">
+          <div className="relative z-10 flex-1 flex flex-col min-h-0">
+            <div className="space-y-4 flex-shrink-0">
               <div>
                 <label className="block text-xs font-mono text-hud-primary mb-2 tracking-wider">&gt; OPERATOR_NAME:</label>
                 <input
@@ -174,22 +174,22 @@ const ContactTerminal = ({ isActive }) => {
                   placeholder="Enter transmission ID..."
                 />
               </div>
-              
-              <div className="flex-1 flex flex-col">
-                <label className="block text-xs font-mono text-hud-primary mb-2 tracking-wider">&gt; MESSAGE_PAYLOAD:</label>
-                <textarea
-                  value={formData.message}
-                  onChange={(e) => setFormData({...formData, message: e.target.value})}
-                  className="flex-1 min-h-[120px] bg-black/50 border-2 border-hud-border rounded px-4 py-3 text-sm text-hud-text font-mono focus:border-hud-primary focus:outline-none focus:shadow-lg focus:shadow-hud-primary/20 transition-all duration-300 resize-none"
-                  placeholder="Enter encrypted message..."
-                />
-              </div>
+            </div>
+            
+            <div className="flex-1 flex flex-col min-h-0 mt-4">
+              <label className="block text-xs font-mono text-hud-primary mb-2 tracking-wider flex-shrink-0">&gt; MESSAGE_PAYLOAD:</label>
+              <textarea
+                value={formData.message}
+                onChange={(e) => setFormData({...formData, message: e.target.value})}
+                className="flex-1 min-h-[120px] bg-black/50 border-2 border-hud-border rounded px-4 py-3 text-sm text-hud-text font-mono focus:border-hud-primary focus:outline-none focus:shadow-lg focus:shadow-hud-primary/20 transition-all duration-300 resize-none"
+                placeholder="Enter encrypted message..."
+              />
             </div>
             
             <motion.button
               type="submit"
               disabled={isTransmitting}
-              className="w-full mt-6 bg-gradient-to-r from-hud-primary/20 to-hud-primary/30 border-2 border-hud-primary text-hud-primary px-6 py-4 rounded font-mono text-sm tracking-wider hover:bg-hud-primary hover:text-black transition-all duration-300 relative overflow-hidden disabled:opacity-50"
+              className="w-full mt-6 bg-gradient-to-r from-hud-primary/20 to-hud-primary/30 border-2 border-hud-primary text-hud-primary px-6 py-4 rounded font-mono text-sm tracking-wider hover:bg-hud-primary hover:text-black transition-all duration-300 relative overflow-hidden disabled:opacity-50 flex-shrink-0"
               whileHover={{ scale: 1.02, boxShadow: '0 0 30px rgba(0,180,216,0.5)' }}
               whileTap={{ scale: 0.98 }}
             >

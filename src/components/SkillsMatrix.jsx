@@ -182,10 +182,10 @@ const SkillsMatrix = ({ isActive }) => {
   }
 
   return (
-    <div className="h-full bg-[#0A0F14] relative">
+    <div className="min-h-full bg-[#0A0F14] relative py-2">
       
       {/* Grid Layout */}
-      <div className="h-full grid grid-cols-1 md:grid-cols-3 grid-rows-5 md:grid-rows-2 gap-2 sm:gap-4 p-2 sm:p-4">
+      <div className="h-full grid grid-cols-1 md:grid-cols-3 grid-rows-5 md:grid-rows-2 gap-2 sm:gap-4">
         
         {/* Top Left - Frontend */}
         <SkillPanel 

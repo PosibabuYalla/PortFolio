@@ -126,7 +126,7 @@ const ProjectSelector = ({ projects, onSelect, selectedId }) => {
       </div>
       
       <div className="flex-1 flex flex-col items-center justify-center relative z-20">
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 max-w-7xl">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 max-w-7xl">
           {projects.map((project, index) => (
             <motion.button
               key={project.id}

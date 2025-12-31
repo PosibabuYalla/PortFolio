@@ -226,9 +226,9 @@ const ActionControls = ({ onNavigate }) => {
 
 const AboutCoreProfile = ({ onNavigate }) => {
   return (
-    <div className="h-full flex flex-col cyber-grid">
+    <div className="min-h-full flex flex-col cyber-grid py-4">
       {/* Main Layout Grid */}
-      <div className="flex-1 grid grid-cols-1 lg:grid-cols-3 gap-6 p-4">
+      <div className="flex-1 grid grid-cols-1 lg:grid-cols-3 gap-6 min-h-0">
         
         {/* Left Panel - Profile Data Terminal */}
         <div className="order-2 lg:order-1">
@@ -260,7 +260,7 @@ const AboutCoreProfile = ({ onNavigate }) => {
               }}
             >
               <img 
-                src="/src/images/posiprofwb.png"
+                src="/images/posiprofwb.png"
                 alt="Posibabu Yalla - System Engineer"
                 className="w-72 h-80 object-contain object-bottom"
                 style={{
@@ -297,12 +297,12 @@ const AboutCoreProfile = ({ onNavigate }) => {
       </div>
       
       {/* Bottom Panel - System Metrics */}
-      <div className="p-4">
+      <div className="flex-shrink-0 mt-4">
         <SystemMetrics />
       </div>
       
       {/* Action Controls */}
-      <div className="p-4 border-t border-hud-border">
+      <div className="flex-shrink-0 mt-4 border-t border-hud-border pt-4">
         <ActionControls onNavigate={onNavigate} />
       </div>
     </div>
