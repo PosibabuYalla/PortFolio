@@ -77,9 +77,9 @@ adopted Click to Chat WhatsApp plugin.`
         </div>
       </motion.div>
 
-      {/* Profile Image with Gaming Animation */}
+      {/* Profile Image with Gaming Animation - Hidden on mobile */}
       <motion.div 
-        className="absolute top-15 left-2 z-10"
+        className="absolute top-15 left-2 z-10 hidden sm:block"
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.3, duration: 0.8 }}
