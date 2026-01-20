@@ -5,34 +5,38 @@ const contacts = [
   {
     id: 1,
     type: "EMAIL",
-    value: "posibabu.yalla@gmail.com",
+    value: "mrposibabuyalla@gmail.com",
     icon: "✉",
     status: "ACTIVE",
-    color: "#00FF41"
+    color: "#00FF41",
+    href: "mailto:mrposibabuyalla@gmail.com"
   },
   {
     id: 2,
     type: "GITHUB",
-    value: "github.com/posibabu",
+    value: "github.com/PosibabuYalla",
     icon: "⚡",
     status: "LIVE",
-    color: "#FF6B35"
+    color: "#FF6B35",
+    href: "https://github.com/PosibabuYalla"
   },
   {
     id: 3,
     type: "LINKEDIN",
-    value: "linkedin.com/in/posibabu-yalla",
+    value: "linkedin.com/in/posibabu-yalla-a05746305",
     icon: "🔗",
     status: "ACTIVE",
-    color: "#0077B5"
+    color: "#0077B5",
+    href: "https://www.linkedin.com/in/posibabu-yalla-a05746305/"
   },
   {
     id: 4,
     type: "PHONE",
-    value: "+91 XXXX XXXX XX",
+    value: "+91 9652557187",
     icon: "📞",
     status: "AVAILABLE",
-    color: "#FFD700"
+    color: "#FFD700",
+    href: "https://wa.me/919652557187"
   }
 ]
 
@@ -73,9 +77,12 @@ const ContactTerminal = ({ isActive }) => {
 
         <div className="flex-1 grid grid-cols-1 gap-4 min-h-0">
           {contacts.map((contact, index) => (
-            <motion.div
+            <motion.a
               key={contact.id}
-              className="relative border-2 rounded-lg p-4 bg-gradient-to-br from-black/60 to-black/30 backdrop-blur-sm group cursor-pointer overflow-hidden"
+              href={contact.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative border-2 rounded-lg p-4 bg-gradient-to-br from-black/60 to-black/30 backdrop-blur-sm group cursor-pointer overflow-hidden block"
               style={{ borderColor: `${contact.color}40` }}
               initial={{ opacity: 0, scale: 0.9, rotateY: -15 }}
               animate={{ opacity: 1, scale: 1, rotateY: 0 }}
@@ -129,7 +136,7 @@ const ContactTerminal = ({ isActive }) => {
                   {contact.value}
                 </div>
               </div>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
       </div>

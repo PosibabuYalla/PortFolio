@@ -24,24 +24,31 @@ const StatusBar = () => {
   const contacts = [
     { 
       type: "EMAIL", 
-      value: "posibabu.yalla@gmail.com",
+      value: "mrposibabuyalla@gmail.com",
       icon: "✉",
       shortType: "@",
-      href: "mailto:posibabu.yalla@gmail.com"
+      href: "mailto:mrposibabuyalla@gmail.com"
     },
     { 
       type: "GITHUB", 
-      value: "github.com/posibabu",
+      value: "github.com/PosibabuYalla",
       icon: "⚡",
       shortType: "GH",
-      href: "https://github.com/posibabu"
+      href: "https://github.com/PosibabuYalla"
     },
     { 
       type: "LINKEDIN", 
-      value: "linkedin.com/in/posibabu-yalla",
+      value: "linkedin.com/in/posibabu-yalla-a05746305",
       icon: "🔗",
       shortType: "LI",
-      href: "https://linkedin.com/in/posibabu-yalla"
+      href: "https://www.linkedin.com/in/posibabu-yalla-a05746305/"
+    },
+    { 
+      type: "PHONE", 
+      value: "+91 9652557187",
+      icon: "📞",
+      shortType: "WA",
+      href: "https://wa.me/919652557187"
     }
   ]
 
