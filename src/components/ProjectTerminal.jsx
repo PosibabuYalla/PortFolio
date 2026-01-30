@@ -35,7 +35,7 @@ const projects = [
       tools: ["Vercel", "Stripe"]
     },
     links: {
-      demo: "#",
+      demo: "https://www.bhadradripapikondalu.com/",
       github: "#",
       case: "#"
     }
@@ -54,7 +54,7 @@ const projects = [
       tools: ["Docker", "AWS"]
     },
     links: {
-      demo: "#",
+      demo: "https://slsitskillup.in/",
       github: "#",
       case: "#"
     }
@@ -73,7 +73,7 @@ const projects = [
       tools: ["cPanel", "SSL"]
     },
     links: {
-      demo: "#",
+      demo: "https://viswabharathilaw.edu.in/",
       github: "#",
       case: "#"
     }
